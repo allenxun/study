@@ -1,0 +1,36 @@
+1.create a project ------- Frist of all,we must create a folders for our own project.
+django-admin startproject mysite
+2.the list of project ----- The list of project like this:
+mysite/
+----manage.py               //a command line
+----mysite                      //the list of url setting
+--------__init__.py       
+--------setting.py            //the setting of our web
+--------urls.py                 //the url of our web
+--------wsgi.py                //the WSGI-compatible web server
+3.database  ----------------I use MySql as my database .
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mysql',
+        'USER': 'root',
+        'PASSWORD': 'sklois123',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+4.creating models
+python manage.py start app command
+command/
+----__init__.py
+----admin.py               //admin  login
+----migrations/           //tables
+--------__init__.py 
+----models.py             //the abstact of the tables
+----tests.py                  // do something between the url and the database,not insert ,select,delete,update
+----views.py                //deal with request and response
+5.write  models
+(1).Edit the mysite/setting.py file,and change the INSTALLED_APPS setting to include the app.
+(2).python manage.py make migrations command
+(3).python manage.py sqlmigrate command 001
+(4).python manage.py syncdb
