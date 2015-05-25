@@ -1,9 +1,10 @@
 import sys
-sys.path.append("home/allen/study/study/nihao")
 
-from test import testimport
-from my import test
+from test import testnihao 
 
-a = testimport.nihao(1)
-c = test(1)
-print a,c,sys.path
+
+
+a = testnihao.nihao(1)
+
+
+print a,sys.path
