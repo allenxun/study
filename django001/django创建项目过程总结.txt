@@ -34,3 +34,6 @@ command/
 (2).python manage.py make migrations command
 (3).python manage.py sqlmigrate command 001
 (4).python manage.py syncdb
+6.html use static file
+(1).Edit the mysite/setting.py file,and change the 
+
