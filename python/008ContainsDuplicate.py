@@ -1,15 +1,12 @@
 class Solution():
     def containDuplicate(self,nums):
-        flag = False
+        nums.sort()
         if len(nums)<=1:
             return False
-        for i in range(0,len(nums)-1):
-            for j in range(i+1,len(nums)):
-                print nums[i],nums[j]
-                if nums[i]==nums[j]:
-                    flag = True
-        return flag
-
+        for i in range(1,len(nums)):
+            if nums[i-1]==nums[i]:
+                return True
+        return False
 a = Solution()
 test = [[3,1,4],[2,3,4,5,3]]
 for i in test:
