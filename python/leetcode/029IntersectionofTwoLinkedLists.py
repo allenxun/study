@@ -15,7 +15,7 @@ class Solution:
         hA = headA
         hB = headB
         while(headA!=None and headB != None):
-            if headA == headB:
+            if headA.val == headB.val:
                 return headA
             headA = headA.next
             headB = headB.next
@@ -28,15 +28,14 @@ class Solution:
         return None
 
 if __name__ == "__main__":
-    h1 = ListNode(5)
-    h2 = ListNode(6)
+    h1 = ListNode(1)
+    h2 = ListNode(2)
     h3 = ListNode(3)
     h4 = ListNode(4)
     
-    l1 = ListNode(5)
-    l2 = ListNode(6)
-    l3 = ListNode(3)
-    l4 = ListNode(4)
+    l1 = ListNode(9)
+    l2 = ListNode(3)
+    l3 = ListNode(4)
 
     h1.next = h2
     h2.next = h3
@@ -45,8 +44,7 @@ if __name__ == "__main__":
 
     l1.next = l2
     l2.next = l3
-    l3.next = l4
-    l4.next = None
+    l3.next = None
     
     a = Solution()
-    print   a.getIntersectionNode(h1,h2).val
+    print   a.getIntersectionNode(h1,l1).val
