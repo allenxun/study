@@ -16,7 +16,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'sklois123',
         'HOST': '',
-        'PORT': '',
+        'PORT': '3306',
     }
 }
 4.creating models
@@ -31,9 +31,9 @@ command/
 ----views.py                //deal with request and response
 5.write  models
 (1).Edit the mysite/setting.py file,and change the INSTALLED_APPS setting to include the app.
-(2).python manage.py make migrations command
-(3).python manage.py sqlmigrate command 001
-(4).python manage.py syncdb
+(2).python manage.py makemigrations command
+(3).python manage.py sqlmigrate command 0001
+(4).python manage.py migrate
 6.html use static file
 (1).Edit the mysite/setting.py file,and change the 
 
