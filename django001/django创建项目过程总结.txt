@@ -20,7 +20,7 @@ DATABASES = {
     }
 }
 4.creating models
-python manage.py start app command
+python manage.py startapp command
 command/
 ----__init__.py
 ----admin.py               //admin  login
